@@ -25,10 +25,6 @@ const Signup = () => {
 
   return (
     <div className="login-main">
-      <div className="page-content">
-        <h1 style={{ marginBottom: '5px', fontSize: '48px' }}>Join Us Today!</h1>
-        <p style={{ marginBottom: '5px', fontSize: '25px' }}>Create your account to explore job opportunities.</p>
-      </div>
       <BackgroundGlobe />
       <div className="login-container">
         <div className="login-content">
@@ -69,7 +65,7 @@ const Signup = () => {
           </form>
           <p className="login-bottom-p">
             Already have an account?{" "}
-            <a href="#" onClick={() => navigate("/login")}>
+            <a href="#" className="login-link" onClick={() => navigate("/login")}>
               Log In
             </a>
           </p>

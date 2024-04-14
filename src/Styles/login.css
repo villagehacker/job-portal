@@ -11,6 +11,17 @@
 html {
   font-size: 10px; /* Adjust as needed */
 }
+.signup-link,
+.login-link {
+  color: #1f16ce; /* Change color as needed */
+  text-decoration: none;
+  padding: 10px;
+}
+
+.signup-link:hover,
+.login-link:hover {
+  text-decoration: underline;
+}
 
 /* Set base font family */
 body {

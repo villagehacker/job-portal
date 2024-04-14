@@ -1,5 +1,3 @@
-// login.jsx
-
 import React, { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
@@ -13,16 +11,11 @@ const Login = () => {
   const navigate = useNavigate();
 
   const handleLogIn = () => {
-    navigate("/dashboard");
+    navigate("/job-page");
   };
 
   return (
     <div className="login-main">
-      <div className="page-content">
-        <h1 style={{ marginBottom: '5px', fontSize: '48px' }}>Tired of searching jobs...?</h1>
-
-        <p style={{ marginBottom: '5px', fontSize: '25px' }}>Explore the various job opportunities with us!</p>
-      </div>
       <BackgroundGlobe />
       <div className="login-container">
         <div className="login-content">
@@ -58,7 +51,7 @@ const Login = () => {
           </form>
           <p className="login-bottom-p">
             Don't have an account?{" "}
-            <a href="#" onClick={() => navigate("/signup")}>
+            <a href="#" className="signup-link" onClick={() => navigate("/signup")}>
               Sign Up
             </a>
           </p>

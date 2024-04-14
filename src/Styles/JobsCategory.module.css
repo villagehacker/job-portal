@@ -1,0 +1,15 @@
+/* JobsCategory.module.css */
+
+.mainDiv {
+    height: 100vh;
+    background-color: #3a3a3a; /* Add your desired background color */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 15%;
+    padding: 10% 10px 5px 10px;
+}
+
+
