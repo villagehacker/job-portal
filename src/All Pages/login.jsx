@@ -13,7 +13,7 @@ const Login = () => {
   const navigate = useNavigate();
 
   const handleLogIn = () => {
-    navigate("/dashboard");
+    navigate("/job-page");
   };
 
   return (
