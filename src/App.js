@@ -9,6 +9,7 @@ import BackgroundGlobe from './BackgroundGlobe';
 import JobPage from './All Pages/JobPage';
 import JobsCategory from './All Pages/JobsCategory';
 import MenuBar from '../src/All Pages/MenuBar';
+import jobs from '../src/All Pages/components/Jobs';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/job-page" element={<JobsCategory />} />
+        <Route path="jobs" elements={<jobs />} />
       </Routes>
     </BrowserRouter>
   );
