@@ -6,14 +6,24 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import Styles from '../Styles/JobsCategory.module.css'
+import { useNavigate } from "react-router-dom";
 
 
 const JobsCategory = () => {
+    const navigate = useNavigate();
+    
+    const handleLogin = () => {
+        navigate('/login');
+    }
+    
+    const handleHrLogin = () => {
+        navigate('/hr-login');
+    }
     return (
         <div className={Styles.mainDiv}>
             <MenuBar />
             <div className={Styles.container}>
-                <div >
+                <div onClick={handleLogin}>
                     <Card sx={{ Width: 450, height: 300}}>
                         <CardActionArea>
                             <CardMedia
@@ -31,7 +41,7 @@ const JobsCategory = () => {
                         </CardActionArea>
                     </Card>
                 </div>
-                <div>
+                <div  onClick={handleHrLogin}>
                     <Card  sx={{ Width: 450, height: 300}}>
                         <CardActionArea>
                             <CardMedia

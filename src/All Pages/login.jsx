@@ -11,7 +11,7 @@ const Login = () => {
   const navigate = useNavigate();
 
   const handleLogIn = () => {
-    navigate("/job-page");
+    navigate("/Jobs");
   };
 
   return (

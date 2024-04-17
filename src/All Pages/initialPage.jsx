@@ -6,7 +6,7 @@ const InitialPage = () => {
     const navigate = useNavigate();
 
     const handleLogin = () => {
-        navigate('/login');
+        navigate('/job-page');
     }
     return (
         <div style={{ position: 'relative', width: '100vw', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>

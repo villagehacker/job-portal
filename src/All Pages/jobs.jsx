@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import Navbar from "../Navbar";
+// import Navbar from "../Navbar/Navbar";
+import Navbar from "../Navbar/Navbar";
 import { Link } from "react-router-dom";
-import "./index.css";
-import Job from "./../../Assets/jobs.json";
-import Filter from "../Filter";
+import "../Styles/Jobs.css";
+import Job from "../jobs.json";
+import Filter from "../Filter/Filter";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 
 const experience = [
@@ -69,7 +70,7 @@ const Jobs = () => {
     });
   }
   return (
-    <>
+    <div className="parent-div">
       <Navbar />
       <div className="jobs-for-you">
         <div className="job-background">
@@ -89,7 +90,8 @@ const Jobs = () => {
                           src={
                             logo.length > 20
                               ? logo
-                              : require(`../../Assets/images/${logo}`)
+                              // : require(`../../Assets/images/${logo}`)
+                              : logo
                           }
                           alt="logo"
                           className="job-profile"
@@ -148,7 +150,7 @@ const Jobs = () => {
           />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
