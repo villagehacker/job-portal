@@ -19,13 +19,12 @@ const JobsCategory = () => {
                             <CardMedia
                                 component="img"
                                 height="250"
-                                image="itjobsimage.png"
-                                alt="IT JOBS"
+                                image="FindJobs.png"
                             />
                             <CardContent>
                                 <Typography gutterBottom variant="h4" component="div">
                                     <div style={{color:'balck',textAlign:'center'}}>
-                                    IT Jobs
+                                    Find New Jobs...!
                                     </div>
                                 </Typography>
                             </CardContent>
@@ -38,13 +37,12 @@ const JobsCategory = () => {
                             <CardMedia
                                 component="img"
                                 height="250"
-                                image="NONITJOBSIMAGE.png"
-                                alt="NON IT JOBS"
+                                image="StartHiring.png"
                             />
                             <CardContent>
                                 <Typography gutterBottom variant="h4" component="div">
                                 <div style={{color:'balck',textAlign:'center'}}>
-                                    Non-IT Jobs
+                                    Start Finding Your Employees...!
                                 </div>
                                 </Typography>
                             </CardContent>
