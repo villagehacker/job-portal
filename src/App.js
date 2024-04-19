@@ -11,7 +11,7 @@ import JobsCategory from './All Pages/JobsCategory';
 // import MenuBar from '../src/All Pages/MenuBar';
 import HrLogin from './All Pages/HrLogin';
 import Jobs from './All Pages/jobs';
-import UserProfile from './All Pages/userProfile';
+import UserProfilePage from './All Pages/userProfile';
 import AppliedJobs from './All Pages/AppliedJobs';
 import AboutUs from './All Pages/AboutUs';
 import Settings from './All Pages/Settings/Setting';
@@ -25,6 +25,7 @@ import HrProfile from './All Pages/HR/Hr-Profile';
 import HireEmp from './All Pages/HR/HireEmp';
 import PostJobPage from './All Pages/HR/PostNewJobs';
 import HRProfilePage from './All Pages/HR/Hr-Profile';
+import ApplyJobs from './All Pages/applyjobs';
 
 
 const App = () => {
@@ -37,7 +38,7 @@ const App = () => {
         <Route path="/signup" element={<Signup />} />
         <Route path="/job-page" element={<JobsCategory />} />
         <Route path="/Jobs" element={<Jobs />} /> 
-        <Route path="/user-profile" element={<UserProfile />} /> 
+        <Route path="/user-profile" element={<UserProfilePage />} /> 
         <Route path="/applied-jobs" element={<AppliedJobs />} /> 
         <Route path="/about-us" element={<AboutUs />} /> 
         <Route path="/settings" element={<Settings />} /> 
@@ -52,6 +53,7 @@ const App = () => {
         <Route path="/post-new-job" element={<PostJobPage />} /> 
         <Route path="/hr-profile-page" element={<HRProfilePage />} /> 
         <Route path="/logout" element={<HrLogin />} />
+        <Route path="/apply-jobs" element={<ApplyJobs />} />
       </Routes>
     </BrowserRouter>
   );
