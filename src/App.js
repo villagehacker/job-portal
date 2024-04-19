@@ -22,6 +22,10 @@ import HrDashboard from './All Pages/HR/HR-dashboard';
 import OurJobs from './All Pages/HR/OurJobs';
 import Applicants from './All Pages/HR/Applicants';
 import HrProfile from './All Pages/HR/Hr-Profile';
+import HireEmp from './All Pages/HR/HireEmp';
+import PostJobPage from './All Pages/HR/PostNewJobs';
+import HRProfilePage from './All Pages/HR/Hr-Profile';
+
 
 const App = () => {
   return (
@@ -44,6 +48,10 @@ const App = () => {
         <Route path="/our-jobs" element={<OurJobs />} /> 
         <Route path="/applicants" element={<Applicants />} /> 
         <Route path="/hr-profile" element={<HrProfile />} /> 
+        <Route path="/hire" element={<HireEmp />} /> 
+        <Route path="/post-new-job" element={<PostJobPage />} /> 
+        <Route path="/hr-profile-page" element={<HRProfilePage />} /> 
+        <Route path="/logout" element={<HrLogin />} />
       </Routes>
     </BrowserRouter>
   );

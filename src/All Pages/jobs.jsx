@@ -1,5 +1,5 @@
+// Jobs.jsx
 import React, { useState } from "react";
-// import Navbar from "../Navbar/Navbar";
 import Navbar from "../Navbar/Navbar";
 import { Link } from "react-router-dom";
 import "../Styles/Jobs.css";
@@ -19,6 +19,7 @@ const Jobs = () => {
   const [filteredJobs, setFilteredJobs] = useState([...JobData, ...Job]);
   const [searchterm, setSearchTerm] = useState("");
   const [active, setActive] = useState(false);
+
   function handleJobFilter(event) {
     const value = event.target.innerText;
     event.preventDefault();
@@ -28,13 +29,15 @@ const Jobs = () => {
       })
     );
   }
+
   function saveClick(id, logo, company, position, location, posted) {
     window.localStorage.setItem(
       "Job",
-      JSON.stringify(id, logo, company, position, location, posted)
+      JSON.stringify({ id, logo, company, position, location, posted })
     );
     console.log(JobData);
   }
+
   const searchEvent = (event) => {
     const data = event.target.value;
     setSearchTerm(data);
@@ -54,6 +57,7 @@ const Jobs = () => {
       setFilteredJobs(Job);
     }
   };
+
   function handleExperienceFilter(checkedState) {
     let filters = [];
     checkedState.forEach((item, index) => {
@@ -69,6 +73,7 @@ const Jobs = () => {
       setFilteredJobs(filters);
     });
   }
+
   return (
     <div className="parent-div">
       <Navbar />
@@ -87,12 +92,7 @@ const Jobs = () => {
                     <div className="job-card">
                       <div className="job-name">
                         <img
-                          src={
-                            logo.length > 20
-                              ? logo
-                              // : require(`../../Assets/images/${logo}`)
-                              : logo
-                          }
+                          src={logo}
                           alt="logo"
                           className="job-profile"
                         />
@@ -114,16 +114,14 @@ const Jobs = () => {
                             to="/Jobs"
                             onClick={() => {
                               saveClick(
-                                {
-                                  id,
-                                  logo,
-                                  company,
-                                  position,
-                                  location,
-                                  posted,
-                                },
-                                setActive(!active)
+                                id,
+                                logo,
+                                company,
+                                position,
+                                location,
+                                posted
                               );
+                              setActive(!active);
                             }}
                           >
                             {JSON.parse(localStorage.getItem("Job"))?.id ===

@@ -21,7 +21,7 @@ justify-content: center;
 #navbar {
     display: flex;
     justify-content: space-between;
-    background: #fff;
+    background: #363535;
     color: #000;
     padding: 1.1rem;
     position: sticky;

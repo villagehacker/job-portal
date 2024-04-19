@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "../Styles/NavBar.css";
 import MenuIcon from '@mui/icons-material/Menu';
 import Popover from '@mui/material/Popover';
@@ -57,13 +57,15 @@ const Navbar = () => {
   };
 
   const PremiumButton = styled(Button)({
-    background: 'linear-gradient(45deg, #FFD700 30%, #FFA500 90%)',
+    background: '#4fb075', // Apply Now button color
     border: 0,
     borderRadius: 3,
-    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
     color: 'white',
-    height: 48,
-    padding: '0 30px',
+    height: 36, // Reduced button height
+    padding: '0 20px', // Reduced padding
+    '&:hover': {
+      background: '#3a8b5f', // Dark green color on hover
+    },
   });
 
   const handleCloseLogoutDialog = () => {
@@ -154,8 +156,8 @@ const Navbar = () => {
                 </Badge>
               </IconButton>
             </span>
-            <span>
-              <MenuIcon onClick={handleClick} />
+            <span >
+              <MenuIcon style={{ fontSize: '25px' }} onClick={handleClick} />
             </span>
             <Popover
               id={id}
