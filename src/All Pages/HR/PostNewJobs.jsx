@@ -1,4 +1,3 @@
-// PostJobPage.jsx
 import React, { useState } from 'react';
 
 const PostJobPage = () => {
@@ -10,6 +9,8 @@ const PostJobPage = () => {
     experience: '',
     salary: '',
   });
+
+  const [showConfirmation, setShowConfirmation] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -32,6 +33,12 @@ const PostJobPage = () => {
       experience: '',
       salary: '',
     });
+    // Show confirmation message
+    setShowConfirmation(true);
+  };
+
+  const handleOkClick = () => {
+    setShowConfirmation(false);
   };
 
   return (
@@ -64,6 +71,12 @@ const PostJobPage = () => {
         </div>
         <button type="submit" style={submitButtonStyle}>Submit</button>
       </form>
+      {showConfirmation && (
+        <div style={confirmationStyle}>
+          <p>Job Updated</p>
+          <button onClick={handleOkClick}>OK</button>
+        </div>
+      )}
     </div>
   );
 };
@@ -85,6 +98,15 @@ const submitButtonStyle = {
   ...inputStyle,
   backgroundColor: '#4CAF50',
   cursor: 'pointer',
+};
+
+const confirmationStyle = {
+  backgroundColor: '#333',
+  color: '#fff',
+  padding: '20px',
+  borderRadius: '5px',
+  textAlign: 'center',
+  marginTop: '20px',
 };
 
 export default PostJobPage;

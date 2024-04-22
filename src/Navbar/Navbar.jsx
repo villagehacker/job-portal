@@ -23,6 +23,7 @@ import { useNavigate } from "react-router-dom";
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
 import CrownIcon from '@mui/icons-material/EmojiEvents';
+import AccountBoxIcon from '@mui/icons-material/AccountBox';
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -33,23 +34,14 @@ const Navbar = () => {
       case 'Profile':
         navigate('/user-profile');
         break;
-      case 'Applied Jobs':
-        navigate('/applied-jobs');
-        break;
       case 'About Us':
         navigate('/about-us');
         break;
       case 'Log out':
-        setOpenLogoutDialog(true);
-        break;
-      case 'Settings':
-        navigate('/settings');
+        navigate('/job-page');
         break;
       case 'All Courses':
         navigate('/courses');
-        break;
-      case 'Favorite Courses':
-        navigate('/fav-courses');
         break;
       default:
         break;
@@ -98,12 +90,12 @@ const Navbar = () => {
   const DrawerList = (
     <Box sx={{ width: 250 }}>
       <List>
-        {['Profile', 'Applied Jobs', 'About Us', 'All Courses', 'Favorite Courses'].map((text, index) => (
+        {['Profile', 'About Us', 'Courses'].map((text, index) => (
 
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon >
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                {index % 2 === 0 ? <AccountBoxIcon /> : <MailIcon />}
               </ListItemIcon>
               <ListItemText primary={text} onClick={handleNavigate(text)} />
             </ListItemButton>
@@ -112,7 +104,7 @@ const Navbar = () => {
       </List>
       <Divider />
       <List>
-        {['Settings', 'Log out'].map((text, index) => (
+        {['Log out'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
@@ -141,7 +133,7 @@ const Navbar = () => {
       <div className="main-page">
         <nav id="navbar">
           <h1 className="logo">
-            Job<span>Hunt</span>
+            Monkey<span>Jobs</span>
           </h1>
           <div>
             <span style={{ paddingRight: '20px' }}>

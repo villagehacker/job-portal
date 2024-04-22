@@ -29,7 +29,7 @@ const HrNavbar = () => {
             <div className="main-page">
                 <nav id="navbar">
                     <h1 className="logo">
-                        Job<span>Hunt</span>
+                        Monkey<span>Jobs</span>
                     </h1>
                     <ul>
                         <li>

@@ -2,7 +2,9 @@
 
 .mainDiv {
     height: 100vh;
-    background-color: #3a3a3a; /* Add your desired background color */
+    background-image: url('C:\Users\SUNAPAANA\Desktop\new-project\job-portal\src\Styles\796169491973.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .container {
@@ -11,5 +13,3 @@
     gap: 15%;
     padding: 10% 10px 5px 10px;
 }
-
-

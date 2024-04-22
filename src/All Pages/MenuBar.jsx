@@ -16,7 +16,7 @@ export default function SearchAppBar() {
                         component="div"
                         sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
                     >
-                        <b>Job Portal</b>
+                        <b>Monkey Jobs</b>
                     </Typography>
                 </Toolbar>
             </AppBar>
